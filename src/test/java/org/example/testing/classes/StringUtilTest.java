@@ -1,11 +1,26 @@
 package org.example.testing.classes;
 
 
+import org.junit.After;
+import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class StringUtilTest {
+
+    @Before
+    public void init() {
+        System.out.println("Beginning");
+    }
+
+    @After
+    public void finish() {
+        System.out.println("Ending");
+    }
+
 
     @Test
     public void repeat_string_zero() {
@@ -27,16 +42,21 @@ public class StringUtilTest {
         assertEquals( "",StringUtil.repeat("titi", -1));
     }
 
-    /*
     @Test
     public void repeat_string_negative1() {
         IllegalArgumentException exception = assertThrows(IllegalArgumentException.class, () -> {
             StringUtil.repeat("titi",-1);
         });
+    }
 
-        String expected = "IllegalArgumentException";
-        assertEquals(expected, exception.getMessage());
-    }*/
+    @Test
+    public void repeat_string_negative_times(){
+        IllegalArgumentException exception = assertThrows(IllegalArgumentException.class, () -> {
+            StringUtil.repeat("hola", -1);
+        });
+
+        assertEquals("Number must be bigger than zero", exception.getMessage());
+    }
 
 
 
