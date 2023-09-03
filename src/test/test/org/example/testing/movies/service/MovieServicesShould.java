@@ -2,7 +2,7 @@ package org.example.testing.movies.service;
 
 import org.example.testing.movies.model.Genre;
 import org.example.testing.movies.model.Movie;
-import org.example.testing.movies.service.data.MovieRepository;
+import org.example.testing.movies.data.MovieRepository;
 import org.hamcrest.CoreMatchers;
 import org.junit.Assert;
 import org.junit.Before;
@@ -12,8 +12,6 @@ import org.mockito.Mockito;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
-
-import static org.junit.Assert.*;
 
 public class MovieServicesShould {
 

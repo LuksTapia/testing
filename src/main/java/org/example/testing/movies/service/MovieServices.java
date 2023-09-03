@@ -2,7 +2,7 @@ package org.example.testing.movies.service;
 
 import org.example.testing.movies.model.Genre;
 import org.example.testing.movies.model.Movie;
-import org.example.testing.movies.service.data.MovieRepository;
+import org.example.testing.movies.data.MovieRepository;
 
 import java.util.ArrayList;
 import java.util.Iterator;

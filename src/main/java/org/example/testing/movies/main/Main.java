@@ -1,4 +1,4 @@
-package org.example.testing.main;
+package org.example.testing.movies.main;
 
 import org.example.testing.classes.StringUtil;
 

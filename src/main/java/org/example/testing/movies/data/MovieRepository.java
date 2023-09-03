@@ -1,4 +1,4 @@
-package org.example.testing.movies.service.data;
+package org.example.testing.movies.data;
 
 import org.example.testing.movies.model.Movie;
 
