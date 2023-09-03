@@ -45,9 +45,14 @@ public class MovieServicesShould {
     public void return_movies_by_gender() {
 
         List<Movie> moviesList = movieServices.findMoviesByGenre(Genre.COMEDY);
-        List<Integer> moviesIds = moviesList.stream().map(Movie::getId).collect(Collectors.toList());
+        List<Integer> moviesIds = getIntegerList(moviesList);
         Assert.assertThat(moviesIds, CoreMatchers.is(Arrays.asList(3,6)));
 
+    }
+
+    private static List<Integer> getIntegerList(List<Movie> moviesList) {
+        List<Integer> moviesIds = moviesList.stream().map(Movie::getId).collect(Collectors.toList());
+        return moviesIds;
     }
 
     @Test
